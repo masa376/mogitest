@@ -23,7 +23,7 @@
 ---
 
 ## URL
-- 開発環境 : [http://localhost/8050](http://localhost/8051)  
+- 開発環境 : [http://localhost/8051](http://localhost/8051)  
 - phpMyAdmin : [http://localhost:8080/](http://localhost:8080/)
 
 
