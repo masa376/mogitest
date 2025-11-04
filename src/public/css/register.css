@@ -1,0 +1,174 @@
+:root {
+    --bg: #f7f7f7;
+    --text: #333;
+    --muted: #9096a0;
+    --yellow: #ffbf1a;
+    --danger: #d22;
+    --border: #e5e7eb;
+    --shadow: 0 6px 18px rgba(0,0,0,.06);
+    --radius: 12px;
+}
+*{box-sizing: border-box}
+html,body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP, sans-serif";
+}
+
+
+/* ヘッダー */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+}
+.logo {
+    font-weight: 700;
+    color: #ffb100;
+    font-size: 22px;
+}
+
+
+/* コンテンツ */
+.wrap {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.title {
+    font-size: 28px;
+    margin: 10px 0 18px;
+}
+
+
+/* フォーム */
+.form {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+.label {
+    display: block;
+    font-weight: 700;
+    margin: 16px 0 8px;
+}
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0 8px;
+}
+.req {
+    display: inline-block;
+    background: #e60012;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+.note {
+    color: #e60012;
+    font-size: 12px;
+}
+
+.input,.textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    background: #fff;
+}
+.textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+/* 画像 */
+.image-block {
+    margin: 6px 0 10px
+}
+.preview {
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.file-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.file-name {
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* 季節 */
+.seasons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 6px;
+}
+.season {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.season input {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* エラー表示 */
+.error {
+    color:var(--danger);
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+
+/* ボタン */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 26px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+.btn--gray {
+    background: #d9d9d9;
+    color: #333;
+}
+.btn--yellow {
+    background: var(--yellow);
+    color: #222;
+}
+
+@media (max-width:640px) {
+    .preview{width:100%}
+    .btn{min-width:140px}
+}

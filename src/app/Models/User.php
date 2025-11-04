@@ -19,8 +19,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'price',
+        'seasons',
+        'description',
+        'image_url'
     ];
 
     /**
@@ -39,6 +41,11 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'seasons' => 'array'
     ];
+
+    public function getImageUrlAttribute()
+    {
+        return $this->image_path ? \Storage::url($this->image_path) : null;
+    }
 }
